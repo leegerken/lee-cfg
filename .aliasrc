@@ -1,0 +1,13 @@
+#!/bin/sh
+
+alias \
+	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
+	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
+	keymap="vim ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
+	webpush="rsync -avz ~/leegerken root@leegerken.org:/var/www --delete" \
+	cal="calcurse" \
+	ali="vim ~/.aliasrc"
+#OpenBSD
+alias cfg="/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+#Linux/MacOS #FIXME Only difference is path to git binary. If there is some way to replace /usr/bin/git with $PATHTOGIT or something, this would make it more universal.
+#cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
