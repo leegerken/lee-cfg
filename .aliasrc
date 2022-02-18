@@ -8,6 +8,6 @@ alias \
 	cal="calcurse" \
 	ali="vim ~/.aliasrc"
 #OpenBSD
-alias cfg="/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+#alias cfg="/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 #Linux/MacOS #FIXME Only difference is path to git binary. If there is some way to replace /usr/bin/git with $PATHTOGIT or something, this would make it more universal.
-#cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
+alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"

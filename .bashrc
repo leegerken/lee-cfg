@@ -1,3 +1,7 @@
-source $HOME/.aliasrc
+PS1="\u@\h \w "
 
-PS1="\u@\H \w "
+# include .bashrc if it exists
+if [ -f $HOME/.aliasrc ]; then
+    . $HOME/.aliasrc
+fi
+
