@@ -15,9 +15,6 @@ call vundle#end()
 
 filetype plugin indent on
 
-:abbr #b /****************************************************
-:abbr #e ****************************************************/
-
 " let mapleader = " "
 set exrc
 set secure
@@ -38,6 +35,9 @@ set termwinsize=12x0   " Set terminal size
 set splitbelow         " Always split below
 set mouse=a            " Enable mouse drag on window splits
 set makeprg=gcc\ %
+
+:abbr #b /****************************************************
+:abbr #e ****************************************************/
 
 "**************************************************** 
 " lamdalisue/fern.vim
@@ -68,9 +68,14 @@ let g:fern#renderer#default#leading          = ' '
 let g:fern#renderer#default#leaf_symbol      = ' '
 let g:fern#renderer#default#root_symbol      = '~ '
 
+"**************************************************** 
+" AutoPairs
+"**************************************************** 
 let g:AutoPairsShortcutToggle = '<C-P>'
 
-" [Tagbar]
+"**************************************************** 
+" Tagbar
+"**************************************************** 
 " Focus the panel when opening it
 let g:tagbar_autofocus = 1
 " Highlight the active tag
@@ -81,12 +86,9 @@ let g:tagbar_position = 'botright vertical'
 
 nmap <F8> :TagbarToggle<CR>
 
-nnoremap <C-I> :NERDTreeToggle<cr>
-map <F5> :call CompileRun()<CR>
-
-imap <F5> <Esc>:call CompileRun()<CR>
-vmap <F5> <Esc>:call CompileRun()<CR>
-
+"**************************************************** 
+" CompileRun
+"**************************************************** 
 func! CompileRun()
 exec "w"
 if &filetype == 'c'
@@ -97,9 +99,9 @@ elseif &filetype == 'cpp'
     exec "!time ./%<"
 elseif &filetype == 'sh'
     exec "!time bash %"
-elseif &filetype == 'python'
-    exec "!time python3 %"
-elseif &filetype == 'html'
-    exec "!google-chrome % &"
 endif
 endfunc
+
+map <F5> :call CompileRun()<CR>
+imap <F5> <Esc>:call CompileRun()<CR>
+vmap <F5> <Esc>:call CompileRun()<CR>
