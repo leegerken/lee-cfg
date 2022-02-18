@@ -7,8 +7,5 @@ alias \
 	webpush="rsync -avz ~/leegerken root@leegerken.org:/var/www --delete" \
 	webpull="rsync -avz root@leegerken.org:/var/www --delete ~/leegerken" \
 	cal="calcurse" \
-	ali="vim ~/.aliasrc"
-#OpenBSD
-alias cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
-#Linux/MacOS #FIXME Only difference is path to git binary. If there is some way to replace /usr/bin/git with $PATHTOGIT or something, this would make it more universal.
-#alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
+	ali="vim ~/.aliasrc" \
+	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
