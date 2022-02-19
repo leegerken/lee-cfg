@@ -15,7 +15,6 @@ call vundle#end()
 
 filetype plugin indent on
 
-" let mapleader = " "
 set exrc
 set secure
 
