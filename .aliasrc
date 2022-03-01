@@ -8,4 +8,5 @@ alias \
 	webpull="rsync -avz root@leegerken.org:/var/www --delete ~/iCloud/leegerken" \
 	cal="calcurse" \
 	ali="vim ~/.aliasrc" \
-	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME"
+	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME" \
+	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
