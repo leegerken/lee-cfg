@@ -8,8 +8,8 @@ call vundle#begin('~/.vim/plugged')
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'preservim/tagbar'
+"Plugin 'jiangmiao/auto-pairs'
+"Plugin 'preservim/tagbar'
 Plugin 'lambdalisue/fern.vim'
 call vundle#end()
 
