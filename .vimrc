@@ -1,5 +1,31 @@
 set nocompatible
 filetype off
+filetype plugin indent on
+syntax on  " Enable syntax highlighting
+
+set exrc
+set secure
+
+set tabstop=3
+set softtabstop=3
+set shiftwidth=3
+set noexpandtab
+
+set incsearch  " Enable incremental search
+set hlsearch   " Enable highlight search
+
+set number relativenumber
+
+set termwinsize=12x0   " Set terminal size
+set splitbelow         " Always split below
+set mouse=a            " Enable mouse drag on window splits
+set makeprg=gcc\ %
+
+let mapleader = ' '
+
+"****************************************************
+" vundle
+"****************************************************
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -13,27 +39,6 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'lambdalisue/fern.vim'
 call vundle#end()
 
-filetype plugin indent on
-
-set exrc
-set secure
-
-set tabstop=3
-set softtabstop=3
-set shiftwidth=3
-set noexpandtab
-
-syntax on  " Enable syntax highlighting
-
-set incsearch  " Enable incremental search
-set hlsearch   " Enable highlight search
-
-set number relativenumber
-
-set termwinsize=12x0   " Set terminal size
-set splitbelow         " Always split below
-set mouse=a            " Enable mouse drag on window splits
-set makeprg=gcc\ %
 
 :abbr #b /****************************************************
 :abbr #e ****************************************************/
@@ -61,8 +66,8 @@ augroup FernEvents
 augroup END
 
 let g:fern#mark_symbol                       = '●'
-let g:fern#renderer#default#collapsed_symbol = '|+ '
-let g:fern#renderer#default#expanded_symbol  = '|- '
+let g:fern#renderer#default#collapsed_symbol = '+ '
+let g:fern#renderer#default#expanded_symbol  = '- '
 let g:fern#renderer#default#leading          = ' '
 let g:fern#renderer#default#leaf_symbol      = ' '
 let g:fern#renderer#default#root_symbol      = '~ '
