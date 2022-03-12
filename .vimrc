@@ -3,30 +3,6 @@ filetype off
 filetype plugin indent on
 syntax on  " Enable syntax highlighting
 
-set exrc
-set secure
-set showcmd
-
-set fillchars=vert:\│
-
-set autoindent
-set smartindent
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-
-set incsearch  " Enable incremental search
-set hlsearch   " Enable highlight search
-
-set number relativenumber
-
-set termwinsize=12x0   " Set terminal size
-set splitbelow         " Always split below
-set mouse=a            " Enable mouse drag on window splits
-set makeprg=gcc\ %
-
-let mapleader = ' '
 "****************************************************
 " vundle
 "****************************************************
@@ -43,7 +19,47 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'preservim/nerdtree'
 call vundle#end()
 
-:abbr #b /****************************************************
+"**************************************************** 
+
+set exrc
+set secure
+set showcmd
+
+set nobackup
+set nowb
+set noswapfile
+
+set fillchars=vert:\│
+hi VertSplit term=NONE cterm=NONE gui=NONE ctermfg=DarkGrey
+
+set autoindent
+set smartindent
+set ts=2
+set sts=2
+set sw=2
+set expandtab
+
+set ai
+set si
+set wrap
+
+" Search
+set incsearch  " Enable incremental search
+set hlsearch   " Enable highlight search
+set ignorecase
+set smartcase
+
+set number relativenumber
+
+set termwinsize=12x0   " Set terminal size
+set splitbelow         " Always split below
+set mouse=a            " Enable mouse drag on window splits
+set makeprg=gcc\ %
+
+let mapleader = ' '
+
+
+:abbr #b "****************************************************
 
 "**************************************************** 
 " preservim/nerdtree
@@ -52,6 +68,9 @@ nnoremap <leader>l :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpanable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 let NERDTreeQuitOnOpen = 1
+
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 
 "**************************************************** 
 " AutoPairs
