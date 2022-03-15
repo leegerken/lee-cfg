@@ -93,4 +93,11 @@ elseif &filetype == 'sh'
 endif
 endfunc
 
+func! CompileRunNcurses()       "Compile and run ncurses.c
+exec "w"
+exec "!gcc % -lncurses -o %<"
+exec "!time ./%<"
+endfunc
+
 map <leader>o :call CompileRun()<CR>
+map <leader>n :call CompileRunNcurses()<CR>
