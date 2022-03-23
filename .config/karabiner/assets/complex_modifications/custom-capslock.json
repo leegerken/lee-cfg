@@ -1,0 +1,32 @@
+{
+  "title": "Change caps_lock to Esc and Command",
+  "rules": [
+	{
+	  "description": "Post Esc if Caps is tapped, Command if held.",
+	  "manipulators": [
+        {
+    "type": "basic",
+    "from": {
+        "key_code": "left_command",
+        "modifiers": {
+            "optional": [
+                "any"
+            ]
+        }
+    },
+    "to": [
+        {
+            "key_code": "left_command",
+            "lazy": true
+        }
+    ],
+    "to_if_alone": [
+        {
+            "key_code": "escape"
+        }
+    ]
+}
+	  ]
+	}
+  ]
+}
