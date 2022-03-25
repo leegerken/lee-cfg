@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias \
+	vim="nvim -u .vimrc" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
 	keymap="vim ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \

@@ -29,7 +29,6 @@ set nobackup
 set nowb
 set noswapfile
 
-set fillchars=vert:\│
 hi VertSplit term=NONE cterm=NONE gui=NONE ctermfg=DarkGrey
 
 set autoindent
@@ -51,7 +50,6 @@ set smartcase
 
 set number relativenumber
 
-set termwinsize=12x0   " Set terminal size
 set splitbelow         " Always split below
 set mouse=a            " Enable mouse drag on window splits
 set makeprg=gcc\ %
