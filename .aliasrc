@@ -11,3 +11,4 @@ alias \
 	ali="$EDITOR ~/.aliasrc" \
 	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME" \
 	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
+alias cdwm='git --git-dir=/home/lee/.local/src/dwm/.git/ --work-tree=/home/lee/.local/src/dwm/'
