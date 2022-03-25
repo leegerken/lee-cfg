@@ -1,13 +1,13 @@
 #!/bin/sh
 
 alias \
-	vim="nvim -u .vimrc" \
+	vim="$EDITOR -u .vimrc" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
-	keymap="vim ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
+	keymap="$EDITOR ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpush="rsync -avz ~/iCloud/leegerken/ root@leegerken.org:/var/www/leegerken/ --delete" \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
-	ali="vim ~/.aliasrc" \
+	ali="$EDITOR ~/.aliasrc" \
 	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME" \
 	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
