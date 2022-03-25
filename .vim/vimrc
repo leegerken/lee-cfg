@@ -29,8 +29,6 @@ set nobackup
 set nowb
 set noswapfile
 
-hi VertSplit term=NONE cterm=NONE gui=NONE ctermfg=DarkGrey
-
 set autoindent
 set smartindent
 set ts=2
