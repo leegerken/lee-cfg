@@ -1,6 +1,6 @@
 set nocompatible
 filetype off
-filetype plugin indent on
+"filetype plugin indent on "'beefier' syntax(?)
 syntax on  " Enable syntax highlighting
 
 "****************************************************
@@ -23,7 +23,8 @@ call vundle#end()
 
 set exrc
 set secure
-set showcmd
+
+set nowrap
 
 set nobackup
 set nowb
