@@ -1,7 +1,7 @@
 set nocompatible
 filetype off
 "filetype plugin indent on "'beefier' syntax(?)
-syntax on  " Enable syntax highlighting
+"syntax on  " Enable syntax highlighting
 
 "****************************************************
 " vundle
@@ -17,6 +17,7 @@ Plugin 'sheerun/vim-polyglot'
 "Plugin 'jiangmiao/auto-pairs'
 "Plugin 'preservim/tagbar'
 Plugin 'preservim/nerdtree'
+Plugin 'mcchrish/nnn.vim'
 call vundle#end()
 
 "**************************************************** 

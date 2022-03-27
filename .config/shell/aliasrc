@@ -1,14 +1,21 @@
 #!/bin/sh
 
 alias \
-	ls="n -e" \
+	home="cd $HOME" \
+	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
 	keymap="$EDITOR ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpush="rsync -avz ~/iCloud/leegerken/ root@leegerken.org:/var/www/leegerken/ --delete" \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
-	ali="vim $HOME/.aliasrc" \
-	cfg="git --git-dir=$HOME/.cfg/.git/ --work-tree=$HOME" \
-	cdwm='git --git-dir=$HOME/.local/src/dwm/.git/ --work-tree=/home/lee/.local/src/dwm/' \
+	ali="vim $HOME/.config/shell/aliasrc" \
+	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
+	cdwm="git --git-dir=$HOME/.local/src/dwm/.git/ --work-tree=/home/lee/.local/src/dwm/" \
 	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
+
+alias \
+	ennn='vim $HOME/.config/nnn/config' \
+	evim='vim $HOME/.vim/vimrc' \
+	elf='vim $HOME/.config/lf/lfrc' \
+	ebash='vim $HOME/.bashrc' \
