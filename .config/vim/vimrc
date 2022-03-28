@@ -3,12 +3,16 @@ filetype off
 "filetype plugin indent on "'beefier' syntax(?)
 "syntax on  " Enable syntax highlighting
 
+set runtimepath+=~/.config/vim.~/.config/vim/after
+
+set viminfo+=n~/.config/vim/viminfo
+
 "****************************************************
 " vundle
 "****************************************************
 
 " Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/vim/bundle/Vundle.vim
 " Download plug-ins to the ~/.vim/plugged/ directory
 call vundle#begin('~/.vim/plugged')
 " Let Vundle manage Vundle

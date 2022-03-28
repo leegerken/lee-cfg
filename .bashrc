@@ -20,3 +20,5 @@ if [ -f $HOME/.config/nnn/config ]; then
     . $HOME/.config/nnn/config
 fi
 
+export VIMINIT="source $HOME/.config/vim/vimrc"
+

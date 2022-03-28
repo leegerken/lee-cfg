@@ -16,6 +16,6 @@ alias \
 
 alias \
 	ennn='vim $HOME/.config/nnn/config' \
-	evim='vim $HOME/.vim/vimrc' \
+	evim='vim $HOME/.config/vim/vimrc' \
 	elf='vim $HOME/.config/lf/lfrc' \
 	ebash='vim $HOME/.bashrc' \
