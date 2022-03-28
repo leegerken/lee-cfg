@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias \
+	ls="ls -G" \
 	home="cd $HOME" \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \

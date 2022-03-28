@@ -20,10 +20,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
 "Plugin 'jiangmiao/auto-pairs'
 "Plugin 'preservim/tagbar'
-Plugin 'preservim/nerdtree'
-Plugin 'mcchrish/nnn.vim'
+Plugin 'ptzz/lf.vim'
+Plugin 'voldikss/vim-floaterm'
 call vundle#end()
-
 "**************************************************** 
 
 set exrc
@@ -35,8 +34,8 @@ set nobackup
 set nowb
 set noswapfile
 
-set autoindent
-set smartindent
+"set autoindent
+"set smartindent
 set ts=2
 set sts=2
 set sw=2
@@ -64,15 +63,14 @@ let mapleader = ' '
 :abbr #b "****************************************************
 
 "**************************************************** 
-" preservim/nerdtree
+" ptzz/lf.vim
 "**************************************************** 
-nnoremap <leader>l :NERDTreeToggle<CR>
-let g:NERDTreeDirArrowExpanable = ''
-let g:NERDTreeDirArrowCollapsible = ''
-let NERDTreeQuitOnOpen = 1
-
-let NERDTreeMinimalUI = 1
-let NERDTreeDirArrows = 1
+let g:lf_map_keys = 0
+map <leader>l :Lf<CR>
+map <leader>o :LfNewTab<CR>
+let g:lf_width = 60
+let g:floatterm_wintype = 'split'
+let g:lf_wintype = 'split'
 
 "**************************************************** 
 " AutoPairs
@@ -101,5 +99,5 @@ exec "!gcc % -lncurses -o %<"
 exec "!time ./%<"
 endfunc
 
-map <leader>o :call CompileRun()<CR>
+map <leader>c :call CompileRun()<CR>
 map <leader>n :call CompileRunNcurses()<CR>
