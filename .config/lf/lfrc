@@ -6,10 +6,13 @@ set shell sh
 set drawbox
 
 # Commands
+
+#No confirm delete function
 cmd delete ${{
-  rm -rf -- $fx
+ rm -rf -- $fx
 }}
 
+#Handles opening with the correct program for each file 
 cmd open ${{
   case $(file --mime-type "$(readlink -f $f)" -b) in
 	  application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
@@ -32,9 +35,14 @@ cmd open ${{
   esac
 }}
 
+#Yank Path 
+cmd yank-path $printf '%s' "$fx" | pbcopy -i -selection clipboard
+
 # Custom Bindings
-# Unmap the default binding
-map d
+map d						# Unmap the default binding
 map D :cut
 map dD delete
+map m
 map mkd push %mkdir<space>
+map	y
+map yp yank-path 

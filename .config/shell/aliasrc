@@ -16,7 +16,6 @@ alias \
 	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
 
 alias \
-	ennn='vim $HOME/.config/nnn/config' \
 	evim='vim $HOME/.config/vim/vimrc' \
 	elf='vim $HOME/.config/lf/lfrc' \
 	ebash='vim $HOME/.bashrc' \
