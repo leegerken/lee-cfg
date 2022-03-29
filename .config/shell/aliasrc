@@ -1,7 +1,6 @@
 #!/bin/sh
 
 alias \
-	ls="ls -G" \
 	home="cd $HOME" \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
@@ -19,3 +18,4 @@ alias \
 	evim='vim $HOME/.config/vim/vimrc' \
 	elf='vim $HOME/.config/lf/lfrc' \
 	ebash='vim $HOME/.bashrc' \
+	est='vim $HOME/.local/src/st/config.h' \
