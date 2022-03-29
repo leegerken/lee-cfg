@@ -32,6 +32,9 @@ cmd open ${{
   esac
 }}
 
-# Bindings
-map D delete
+# Custom Bindings
+# Unmap the default binding
+map d
+map D :cut
+map dD delete
 map mkd push %mkdir<space>

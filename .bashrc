@@ -15,10 +15,6 @@ if [ -f $HOME/.config/shell/aliasrc ]; then
     . $HOME/.config/shell/aliasrc
 fi
 
-# nnn config source
-if [ -f $HOME/.config/nnn/config ]; then
-    . $HOME/.config/nnn/config
-fi
-
+#Necessary to move vim config from ~ to ~/.config
 export VIMINIT="source $HOME/.config/vim/vimrc"
 
