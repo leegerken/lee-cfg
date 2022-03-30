@@ -4,6 +4,8 @@
 set icons on
 set shell sh
 set drawbox
+set nopreview
+set ratios 1
 
 # Commands
 
