@@ -19,3 +19,6 @@ alias \
 	elf='vim $HOME/.config/lf/lfrc' \
 	ebash='vim $HOME/.bashrc' \
 	est='vim $HOME/.local/src/st/config.h' \
+	edwm='vim $HOME/.local/src/dwm/config.h' \
+
+
