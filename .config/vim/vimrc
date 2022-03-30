@@ -1,16 +1,10 @@
-set nocompatible
 filetype off
 "filetype plugin indent on "'beefier' syntax(?)
-"syntax on  " Enable syntax highlighting
-
-set runtimepath+=~/.config/vim.~/.config/vim/after
-
-set viminfo+=n~/.config/vim/viminfo
+syntax on  " Enable syntax highlighting
 
 "****************************************************
 " vundle
 "****************************************************
-
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.config/vim/bundle/Vundle.vim
 " Download plug-ins to the ~/.vim/plugged/ directory
@@ -23,7 +17,11 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'ptzz/lf.vim'
 Plugin 'voldikss/vim-floaterm'
 call vundle#end()
-"**************************************************** 
+
+set backspace=indent,eol,start
+set nocompatible
+set runtimepath+=~/.config/vim.~/.config/vim/after
+set viminfo+=n~/.config/vim/viminfo
 
 set exrc
 set secure
@@ -71,12 +69,10 @@ map <leader>o :LfNewTab<CR>
 let g:lf_width = 60
 let g:floatterm_wintype = 'split'
 let g:lf_wintype = 'split'
-
 "**************************************************** 
 " AutoPairs
 "**************************************************** 
 let g:AutoPairsShortcutToggle = '<C-P>'
-
 "**************************************************** 
 " CompileRun
 "**************************************************** 
@@ -93,6 +89,11 @@ elseif &filetype == 'sh'
 endif
 endfunc
 
+func! CompileMake()             "Compile using make and add changes to git
+exec "w"
+exec "!doas make install %<"
+endfunc
+
 func! CompileRunNcurses()       "Compile and run ncurses.c
 exec "w"
 exec "!gcc % -lncurses -o %<"
@@ -101,3 +102,4 @@ endfunc
 
 map <leader>c :call CompileRun()<CR>
 map <leader>n :call CompileRunNcurses()<CR>
+map <leader>m :call CompileMake()<CR>
