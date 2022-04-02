@@ -1,5 +1,5 @@
 filetype off
-"filetype plugin indent on "'beefier' syntax(?)
+filetype plugin on "'beefier' syntax(?)
 syntax on  " Enable syntax highlighting
 
 "****************************************************
@@ -7,12 +7,14 @@ syntax on  " Enable syntax highlighting
 "****************************************************
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.config/vim/bundle/Vundle.vim
+set runtimepath+=~/.config/vim.~/.config/vim/after
+set viminfo+=n~/.config/vim/viminfo
 " Download plug-ins to the ~/.vim/plugged/ directory
-call vundle#begin('~/.vim/plugged')
+call vundle#begin('~/.config/vim/plugged')
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
-"Plugin 'jiangmiao/auto-pairs'
+"Plugin 'jiangmiao/auto-pairs' 
 "Plugin 'preservim/tagbar'
 Plugin 'ptzz/lf.vim'
 Plugin 'voldikss/vim-floaterm'
@@ -20,8 +22,6 @@ call vundle#end()
 
 set backspace=indent,eol,start
 set nocompatible
-set runtimepath+=~/.config/vim.~/.config/vim/after
-set viminfo+=n~/.config/vim/viminfo
 
 set exrc
 set secure
@@ -51,7 +51,6 @@ set smartcase
 
 set number relativenumber
 
-set splitbelow         " Always split below
 set mouse=a            " Enable mouse drag on window splits
 set makeprg=gcc\ %
 
@@ -64,12 +63,10 @@ let mapleader = ' '
 " ptzz/lf.vim
 "**************************************************** 
 let g:lf_map_keys = 0
-map <leader>l :Lf<CR>
-map <leader>o :LfNewTab<CR>
-let g:lf_width = 60
-let g:floatterm_wintype = 'split'
-let g:lf_wintype = 'split'
+map <leader>l :lf<CR>
+map <leader>o :LfSplit<CR>
 "**************************************************** 
+"
 " AutoPairs
 "**************************************************** 
 let g:AutoPairsShortcutToggle = '<C-P>'
@@ -103,3 +100,23 @@ endfunc
 map <leader>c :call CompileRun()<CR>
 map <leader>n :call CompileRunNcurses()<CR>
 map <leader>m :call CompileMake()<CR>
+
+" Split vertically using "vs"
+nnoremap vs :vs<CR>
+
+" Split horizontally using "sp"
+nnoremap sp :sp<CR>
+
+" Move one pane left using "Shift H"
+nnoremap H <C-W><C-H>
+
+" Move one pane right using "Shift L"
+nnoremap L <C-W><C-L>
+
+" Move one pane down using "Shift J"
+nnoremap J <C-W><C-J>
+
+" Move one pane up using "Shift K"
+nnoremap K <C-W><C-K>
+
+nnoremap Q :wq<CR>

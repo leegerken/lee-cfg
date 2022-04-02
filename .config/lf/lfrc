@@ -11,7 +11,7 @@ set ratios 1
 
 #No confirm delete function
 cmd delete ${{
- rm -rf -- $fx
+ rm -rf -- $fx 
 }}
 
 #Handles opening with the correct program for each file 
