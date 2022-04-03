@@ -10,6 +10,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1 #MacOS-Removes notice when you are not
 
 export EDITOR="/usr/bin/vim"
 
-if [ -f $HOME/.config/lf/lficons ]; then
-	. $HOME/.config/lf/lficons
-fi
+#if [ -f $HOME/.config/lf/lficons ]; then
+#	. $HOME/.config/lf/lficons
+#fi

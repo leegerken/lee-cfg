@@ -20,5 +20,4 @@ alias \
 	ebash='vim $HOME/.bashrc' \
 	est='vim $HOME/.local/src/st/config.h' \
 	edwm='vim $HOME/.local/src/dwm/config.h' \
-
-
+	etmux='vim $HOME/.config/tmux/tmux.conf' \

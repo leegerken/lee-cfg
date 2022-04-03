@@ -1,8 +1,8 @@
 #lf config file
 
 # Options
-set icons on
-set shell sh
+set noicons on 
+set shell bash
 set drawbox
 set nopreview
 set ratios 1

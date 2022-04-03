@@ -2,9 +2,9 @@ filetype off
 filetype plugin on "'beefier' syntax(?)
 syntax on  " Enable syntax highlighting
 
-"****************************************************
+"***************************************************
 " vundle
-"****************************************************
+"***************************************************
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.config/vim/bundle/Vundle.vim
 set runtimepath+=~/.config/vim.~/.config/vim/after
@@ -16,8 +16,9 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'sheerun/vim-polyglot'
 "Plugin 'jiangmiao/auto-pairs' 
 "Plugin 'preservim/tagbar'
-Plugin 'ptzz/lf.vim'
-Plugin 'voldikss/vim-floaterm'
+Plugin 'preservim/nerdtree'
+"Plugin 'ptzz/lf.vim'
+"Plugin 'voldikss/vim-floaterm'
 call vundle#end()
 
 set backspace=indent,eol,start
@@ -44,35 +45,70 @@ set si
 set wrap
 
 " Search
-set incsearch  " Enable incremental search
-set hlsearch   " Enable highlight search
+set incsearch   " Enable incremental search
+set hlsearch    " Enable highlight search
 set ignorecase
 set smartcase
+set nohlsearch
 
 set number relativenumber
 
-set mouse=a            " Enable mouse drag on window splits
+set mouse-=a    " disable mouse
 set makeprg=gcc\ %
 
 let mapleader = ' '
 
+:abbr #b "*************************************************** 
 
-:abbr #b "****************************************************
+"************************************************** 
+" netrw
+"**************************************************
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 30
+let g:netrw_altv = 1
 
-"**************************************************** 
+let g:NetrwIsOpen=0
+
+nnoremap <silent> <leader>l :call ToggleNetrw()<CR>
+
+func! ToggleNetrw()
+  if g:NetrwIsOpen
+    let i = bufnr("$")
+      while (i >= 1)
+        if (getbufvar(i, "&filetype") == "netrw")
+          silent exe "bwipeout " . i
+        endif
+        let i-=1
+      endwhile
+    let g:NetrwIsOpen=0
+  else
+  let g:NetrwIsOpen=1
+  silent Lexplore
+  endif
+endfunction
+
+"***************************************************
+" preservim/nerdtree.vim
+"***************************************************
+"nnoremap <leader>l :NERDTreeToggle<CR>
+
+"***************************************************
 " ptzz/lf.vim
-"**************************************************** 
-let g:lf_map_keys = 0
-map <leader>l :lf<CR>
-map <leader>o :LfSplit<CR>
-"**************************************************** 
-"
+"***************************************************
+"let g:lf_map_keys = 0
+"map <leader>l :lf<CR>
+"map <leader>o :LfSplit<CR>
+
+"**************************************************
 " AutoPairs
-"**************************************************** 
+"************************************************** 
 let g:AutoPairsShortcutToggle = '<C-P>'
-"**************************************************** 
+
+"************************************************** 
 " CompileRun
-"**************************************************** 
+"**************************************************
 func! CompileRun()
 exec "w"
 if &filetype == 'c'
@@ -86,12 +122,14 @@ elseif &filetype == 'sh'
 endif
 endfunc
 
-func! CompileMake()             "Compile using make and add changes to git
+"Compile using make and add changes to git
+func! CompileMake() 
 exec "w"
 exec "!doas make install %<"
 endfunc
 
-func! CompileRunNcurses()       "Compile and run ncurses.c
+"Compile and run ncurses.c
+func! CompileRunNcurses()
 exec "w"
 exec "!gcc % -lncurses -o %<"
 exec "!time ./%<"
@@ -120,3 +158,4 @@ nnoremap J <C-W><C-J>
 nnoremap K <C-W><C-K>
 
 nnoremap Q :wq<CR>
+nnoremap ! :q!<CR>
