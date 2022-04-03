@@ -2,6 +2,7 @@
 
 alias \
 	home="cd $HOME" \
+	ali="vim $HOME/.config/shell/aliasrc" \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
@@ -9,10 +10,9 @@ alias \
 	webpush="rsync -avz ~/iCloud/leegerken/ root@leegerken.org:/var/www/leegerken/ --delete" \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
-	ali="vim $HOME/.config/shell/aliasrc" \
 	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
 	cdwm="git --git-dir=$HOME/.local/src/dwm/.git/ --work-tree=/home/lee/.local/src/dwm/" \
-	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken"
+	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken" \
 
 alias \
 	evim='vim $HOME/.config/vim/vimrc' \
@@ -21,3 +21,7 @@ alias \
 	est='vim $HOME/.local/src/st/config.h' \
 	edwm='vim $HOME/.local/src/dwm/config.h' \
 	etmux='vim $HOME/.config/tmux/tmux.conf' \
+
+alias \
+	ta='tmux attach -t' \
+	tn='tmux -new -s' \
