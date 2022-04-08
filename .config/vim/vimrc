@@ -58,17 +58,16 @@ set makeprg=gcc\ %
 
 let mapleader = ' '
 
-:abbr #b "*************************************************** 
+:abbr #b "******************************* 
 
-"************************************************** 
+"*****************************************
 " netrw
-"**************************************************
+"*****************************************
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
 let g:netrw_winsize = 30
 let g:netrw_altv = 1
-
 let g:NetrwIsOpen=0
 
 nnoremap <silent> <leader>l :call ToggleNetrw()<CR>
@@ -89,26 +88,26 @@ func! ToggleNetrw()
   endif
 endfunction
 
-"***************************************************
+"*****************************************
 " preservim/nerdtree.vim
-"***************************************************
+"*****************************************
 "nnoremap <leader>l :NERDTreeToggle<CR>
 
-"***************************************************
+"*****************************************
 " ptzz/lf.vim
-"***************************************************
+"*****************************************
 "let g:lf_map_keys = 0
 "map <leader>l :lf<CR>
 "map <leader>o :LfSplit<CR>
 
-"**************************************************
+"*****************************************
 " AutoPairs
-"************************************************** 
+"*****************************************
 let g:AutoPairsShortcutToggle = '<C-P>'
 
-"************************************************** 
+"*****************************************
 " CompileRun
-"**************************************************
+"*****************************************
 func! CompileRun()
 exec "w"
 if &filetype == 'c'
@@ -132,10 +131,10 @@ endfunc
 func! CompileRunNcurses()
 exec "w"
 exec "!gcc % -lncurses -o %<"
-exec "!time ./%<"
+exec "!time ./%| less"
 endfunc
 
-map <leader>c :call CompileRun()<CR>
+map <leader>o :call CompileRun()<CR>
 map <leader>n :call CompileRunNcurses()<CR>
 map <leader>m :call CompileMake()<CR>
 

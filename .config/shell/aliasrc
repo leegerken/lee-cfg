@@ -6,8 +6,8 @@ alias \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
-	keymap="$EDITOR ~/iCloud/library/program_files/Lee_5x12_QMK/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
-	webpush="rsync -avz ~/iCloud/leegerken/ root@leegerken.org:/var/www/leegerken/ --delete" \
+	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
+	webpush="rsync -avz ~/iCloud/Website/ root@leegerken.org:/var/www/leegerken/ --delete" \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
 	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
@@ -24,4 +24,4 @@ alias \
 
 alias \
 	ta='tmux attach -t' \
-	tn='tmux -new -s' \
+	tn='tmux new -s' \
