@@ -1,10 +1,10 @@
 # lee-cfg
 These are my configuration files. Programs are listed below with issues/improvements I'd like to make to them. 
 ## .bashrc .profile
+
 ## vim
 editor and IDE.
 vimrc and vundle to manage plugins.
-### Problems
 ## git
 ### Problems
 I want all of my config files to be in .config but I am having trouble wrangling all my pieces in the pen.
