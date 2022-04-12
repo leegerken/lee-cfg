@@ -47,4 +47,5 @@ map dD delete
 map m
 map mkd push %mkdir<space>
 map	y
-map yp yank-path 
+map yp yank-path
+map <backspace2> set hidden!

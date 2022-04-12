@@ -12,7 +12,6 @@ alias \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
 	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
-	cdwm="git --git-dir=$HOME/.local/src/dwm/.git/ --work-tree=/home/lee/.local/src/dwm/" \
 	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken" \
 
 alias \

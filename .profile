@@ -9,6 +9,8 @@ export PATH=$PATH:/Users/lee/.local/bin
 export BASH_SILENCE_DEPRECATION_WARNING=1 #MacOS-Removes notice when you are not using zsh >:/
 
 export EDITOR="/usr/bin/vim"
+export FILE="ranger"
+export BROWSER="qutebrowser"
 
 #if [ -f $HOME/.config/lf/lficons ]; then
 #	. $HOME/.config/lf/lficons
