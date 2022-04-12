@@ -138,11 +138,10 @@ exec "!time ./%<"
 endfunc
 
 "Compile and run Groff
-"Because for some reason it doesn't work
-"in my if else branch?
+"Because for some reason it doesn't work in my if else branch?
 func! CompileRoff()
   exec "w"
-  exec "!groff -ms % -T pdf > %:r.pdf"
+  exec "!refer -p ~/.config/bib % | groff -ms % -T pdf > %:r.pdf"
 endfunc
 
 map <leader>o :call CompileRun()<CR>
