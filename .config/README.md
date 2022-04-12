@@ -9,10 +9,12 @@ vimrc and vundle to manage plugins.
 ### Problems
 I want all of my config files to be in .config but I am having trouble wrangling all my pieces in the pen.
 ## lf
-TUI file manager written in go. Much faster than ranger, but much more of a work in progress at the moment. 
+TUI file manager written in go. Much faster than ranger, but much more of a work in progress at the moment.
 ### Problems
 Deleting things is a nightmare.
-Still haven't implemented a copy function
+Still haven't implemented a copy function.
+Doesn't open filetypes with their correct programs properly yet.
+Honestly its barely a file manager. Thinking about trying nnn or switching back to ranger.
 ## zathura
 great pdf reader
 ### Problems
