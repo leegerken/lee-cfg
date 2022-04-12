@@ -108,16 +108,19 @@ let g:AutoPairsShortcutToggle = '<C-P>'
 "*****************************************
 " CompileRun
 "*****************************************
+" '%' is a register that holds the current filename.
 func! CompileRun()
 exec "w"
 if &filetype == 'c'
-    exec "!gcc % -o %<"
-    exec "!time ./%<"
+  exec "!gcc % -o %<" 
+  exec "!time ./%<"
 elseif &filetype == 'cpp'
-    exec "!g++ -g -Wall *.cpp -o %<"
-    exec "!time ./%<"
+  exec "!g++ -g -Wall *.cpp -o %<"
+  exec "!time ./%<"
 elseif &filetype == 'sh'
-    exec "!time bash %"
+  exec "!time bash %"
+elseif &filetype == 'ms'
+  exec "!groff -ms % -T pdf > %:r.pdf"
 endif
 endfunc
 
@@ -131,12 +134,21 @@ endfunc
 func! CompileRunNcurses()
 exec "w"
 exec "!gcc % -lncurses -o %<"
-exec "!time ./%| less"
+exec "!time ./%<"
+endfunc
+
+"Compile and run Groff
+"Because for some reason it doesn't work
+"in my if else branch?
+func! CompileRoff()
+  exec "w"
+  exec "!groff -ms % -T pdf > %:r.pdf"
 endfunc
 
 map <leader>o :call CompileRun()<CR>
 map <leader>n :call CompileRunNcurses()<CR>
 map <leader>m :call CompileMake()<CR>
+map <leader>r :call CompileRoff()<CR>
 
 " Split vertically using "vs"
 nnoremap vs :vs<CR>
