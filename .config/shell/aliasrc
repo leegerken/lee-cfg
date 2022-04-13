@@ -21,6 +21,8 @@ alias \
 	est='vim $HOME/.local/src/st/config.h' \
 	edwm='vim $HOME/.local/src/dwm/config.h' \
 	etmux='vim $HOME/.config/tmux/tmux.conf' \
+	eyab='vim $HOME/.config/yabai/yabairc' \
+	esk='vim $HOME/.config/skhd/skhdrc' \
 
 alias \
 	ta='tmux attach -t' \
