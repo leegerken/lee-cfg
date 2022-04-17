@@ -4,6 +4,7 @@ alias \
 	home="cd $HOME" \
   bib="vim $HOME/.config/bib" \
 	ali="vim $HOME/.config/shell/aliasrc" \
+	ra="ranger" \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
 	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
