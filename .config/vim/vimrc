@@ -1,48 +1,32 @@
+"source $HOME/.config/vim/plugins.conf
+
+set nocompatible    " Disables vi compatibilty
 filetype off
-filetype plugin on "'beefier' syntax(?)
-syntax on  " Enable syntax highlighting
-
-"***************************************************
-" vundle
-"***************************************************
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.config/vim/bundle/Vundle.vim
-set runtimepath+=~/.config/vim.~/.config/vim/after
-set viminfo+=n~/.config/vim/viminfo
-" Download plug-ins to the ~/.vim/plugged/ directory
-call vundle#begin('~/.config/vim/plugged')
-" Let Vundle manage Vundle
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'sheerun/vim-polyglot'
-"Plugin 'jiangmiao/auto-pairs' 
-"Plugin 'preservim/tagbar'
-Plugin 'preservim/nerdtree'
-"Plugin 'ptzz/lf.vim'
-"Plugin 'voldikss/vim-floaterm'
-call vundle#end()
-
-set backspace=indent,eol,start
-set nocompatible
+filetype plugin on  "'beefier' syntax(?)
+"Disables the auto comment insertion after starting a new
+"line.
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=ok
+syntax on           " Enable syntax highlighting
 
 set exrc
 set secure
 
-set nowrap
-
+set wrap        "line wrap
 set nobackup
 set nowb
 set noswapfile
 
 "set autoindent
 "set smartindent
+
+" Tabbing
 set ts=2
 set sts=2
 set sw=2
 set expandtab
 
-set ai
-set si
-set wrap
+"set ai
+"set si
 
 " Search
 set incsearch   " Enable incremental search
@@ -53,16 +37,44 @@ set nohlsearch
 
 set number relativenumber
 
-set mouse-=a    " disable mouse
+set mouse=a    " enable mouse
 set makeprg=gcc\ %
+
+set backspace=indent,eol,start
+
 
 let mapleader = ' '
 
-:abbr #b "******************************* 
+:abbr #b "******************************
 
-"*****************************************
+"*******************************
+" vundle
+"*******************************
+" Set the runtime path to include Vundle and initialize
+set rtp+=~/.config/vim/bundle/Vundle.vim
+set runtimepath+=~/.config/vim.~/.config/vim/after
+set viminfo+=n~/.config/vim/viminfo
+call vundle#begin('~/.config/vim/plugged')
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'sheerun/vim-polyglot'
+"Plugin 'jiangmiao/auto-pairs' 
+"Plugin 'preservim/tagbar'
+Plugin 'preservim/nerdtree'
+Plugin 'lervag/vimtex'
+call vundle#end()
+
+"****************************** 
+" vimtex
+"******************************
+let g:vimtex_view_method = 'zathura'
+let g:vimtex_view_skim_sync = 1
+let g:vimtex_view_skim_activate = 1
+let maplocalleader = ' '
+
+"******************************
 " netrw
-"*****************************************
+"******************************
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_browse_split = 4
@@ -70,7 +82,7 @@ let g:netrw_winsize = 30
 let g:netrw_altv = 1
 let g:NetrwIsOpen=0
 
-nnoremap <silent> <leader>l :call ToggleNetrw()<CR>
+nnoremap <silent> <leader>lk :call ToggleNetrw()<CR>
 
 func! ToggleNetrw()
   if g:NetrwIsOpen
@@ -88,26 +100,26 @@ func! ToggleNetrw()
   endif
 endfunction
 
-"*****************************************
+"***********************
 " preservim/nerdtree.vim
-"*****************************************
+"***********************
 "nnoremap <leader>l :NERDTreeToggle<CR>
 
-"*****************************************
+"***********************
 " ptzz/lf.vim
-"*****************************************
+"***********************
 "let g:lf_map_keys = 0
 "map <leader>l :lf<CR>
 "map <leader>o :LfSplit<CR>
 
-"*****************************************
+"***********************
 " AutoPairs
-"*****************************************
+"***********************
 let g:AutoPairsShortcutToggle = '<C-P>'
 
-"*****************************************
+"***********************
 " CompileRun
-"*****************************************
+"***********************
 " '%' is a register that holds the current filename.
 func! CompileRun()
 exec "w"
@@ -124,17 +136,10 @@ elseif &filetype == 'ms'
 endif
 endfunc
 
-"Compile using make and add changes to git
-func! CompileMake() 
-exec "w"
-exec "!doas make install %<"
-endfunc
-
 "Compile and run ncurses.c
-func! CompileRunNcurses()
+func! CompileGame()
 exec "w"
-exec "!gcc % -lncurses -o %<"
-exec "!time ./%<"
+exec "!(cd ..; make)"
 endfunc
 
 "Compile and run Groff
@@ -144,26 +149,21 @@ func! CompileRoff()
   exec "!refer -p ~/.config/bib % | groff -ms -T pdf > %:r.pdf"
 endfunc
 
+" Mappings
 map <leader>o :call CompileRun()<CR>
-map <leader>n :call CompileRunNcurses()<CR>
-map <leader>m :call CompileMake()<CR>
+map <leader>n :call CompileGame()<CR>
 map <leader>r :call CompileRoff()<CR>
 
 " Split vertically using "vs"
 nnoremap vs :vs<CR>
-
 " Split horizontally using "sp"
 nnoremap sp :sp<CR>
-
 " Move one pane left using "Shift H"
 nnoremap H <C-W><C-H>
-
 " Move one pane right using "Shift L"
 nnoremap L <C-W><C-L>
-
 " Move one pane down using "Shift J"
 nnoremap J <C-W><C-J>
-
 " Move one pane up using "Shift K"
 nnoremap K <C-W><C-K>
 
