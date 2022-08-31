@@ -1,8 +1,10 @@
 #!/bin/sh
 
 alias \
+	vim="nvim" \
+	la="ls -a" \
 	home="cd $HOME" \
-  bib="vim $HOME/.config/bib" \
+	bib="vim $HOME/.config/bib" \
 	ali="vim $HOME/.config/shell/aliasrc" \
 	ra='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"' \
 	lf='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"' \
@@ -14,17 +16,13 @@ alias \
 	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
 	cal="calcurse" \
 	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
-	web="git --git-dir=$HOME/iCloud/leegerken/.git/ --work-tree=$HOME/iCloud/leegerken" \
 
 alias \
-	evim='vim $HOME/.config/vim/vimrc' \
-	elf='vim $HOME/.config/lf/lfrc' \
+	evim='vim $HOME/.config/nvim/init.vim' \
 	ebash='vim $HOME/.bashrc' \
 	est='vim $HOME/.local/src/st/config.h' \
 	edwm='vim $HOME/.local/src/dwm/config.h' \
 	etmux='vim $HOME/.config/tmux/tmux.conf' \
-	eyab='vim $HOME/.config/yabai/yabairc' \
-	esk='vim $HOME/.config/skhd/skhdrc' \
 
 alias \
 	ta='tmux attach -t' \
