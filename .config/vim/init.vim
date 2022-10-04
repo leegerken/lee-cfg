@@ -7,28 +7,49 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set guicursor=i:block
-set relativenumber
+set number relativenumber
 set incsearch
 set nohlsearch
 set splitbelow
 set splitright
 set hidden
 set scrolloff=8
+set mouse=
 
 let mapleader = ' '
 nnoremap Q :wq<cr>
 nnoremap ! :q!<cr>
 
+" --- Plugins - vimplug 
+call plug#begin()
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'BurntSushi/ripgrep'
+Plug 'sharkdp/fd'
+Plug 'vimwiki/vimwiki'
+call plug#end()
+
 " --- Compile & Run
 func! CompileRun()
   exec "w"
   if &filetype == 'c'
-    exec "!gcc % -o %<"
-    exec "!time ./%<"
+    exec "!gcc *.c -o %<"
   elseif &filetype == 'ruby'
     exec "!ruby %"
   endif
 endfunc
 
 map <leader>o :call CompileRun()<CR>
+
+" --- Telescope FuzzyFinder
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" Using Lua functions
+"nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+"nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+"nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+"nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 

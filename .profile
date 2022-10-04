@@ -2,7 +2,7 @@ source $HOME/.bashrc
 
 export PATH=$PATH:/Users/lee/.local/bin
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="/opt/homebrew/bin/nvim/"
 export FILE="ranger"
 export BROWSER="qutebrowser"
 
