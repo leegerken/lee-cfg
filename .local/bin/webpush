@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rsync -avz $HOME/Website/ lee@leegerken.org:/var/www/leegerken/ --delete
+

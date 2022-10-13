@@ -1,21 +1,25 @@
 #!/bin/sh
 
 alias \
-	vim="nvim" \
-	la="ls -a" \
-	home="cd $HOME" \
+  reload="source $HOME/.bashrc" \
+  vim="nvim" \
+  ls="ls -aG"  \
+  home="cd $HOME" \
 	bib="vim $HOME/.config/bib" \
 	ali="vim $HOME/.config/shell/aliasrc" \
 	ra='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"' \
 	lf='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"' \
 	mpv="mpv --window-scale=0.25" \
 	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
-	yta="yt -ci -f 'bestaudio[ext=m4a]'" \
+	yta="yt-dlp -ci -f 'bestaudio[ext=m4a]'" \
+  tdl="twitch-dl download" \
 	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
-	webpush="rsync -avz ~/iCloud/Website/ root@leegerken.org:/var/www/leegerken/ --delete" \
-	webpull="rsync -avz root@leegerken.org:/var/www/leegerken/ ~/iCloud/leegerken/ --delete" \
+	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
 	cal="calcurse" \
-	cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
+
+alias \
+  cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
+  hw="git --git-dir=$HOME/Coursework/.git/ --work-tree=$HOME/Coursework" \
 
 alias \
 	evim="vim $HOME/.config/nvim/init.vim" \
@@ -25,6 +29,7 @@ alias \
 	edwm="vim $HOME/.local/src/dwm/config.h" \
 	etmux="vim $HOME/.config/tmux/tmux.conf" \
   essh="vim $HOME/.ssh/config" \
+  eweb="vim $HOME/Website/index.html" \
 
 alias \
 	ta="tmux attach -t" \
