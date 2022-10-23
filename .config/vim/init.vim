@@ -42,6 +42,8 @@ func! CompileRun()
     exec "!scala %"
   elseif &filetype == 'html'
     exec "!webpush"
+  elseif &filetype == 'css'
+    exec "!webpush"
   endif
 endfunc
 

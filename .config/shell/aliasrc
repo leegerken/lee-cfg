@@ -16,6 +16,7 @@ alias \
 	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
 	cal="calcurse" \
+  zpush="rsync -avz $HOME/zserver/ lee@192.168.1.25:/opt/zserver/ --delte" \
 
 alias \
   cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
@@ -30,6 +31,7 @@ alias \
 	etmux="vim $HOME/.config/tmux/tmux.conf" \
   essh="vim $HOME/.ssh/config" \
   eweb="vim $HOME/Website/index.html" \
+  estyle="vim $HOME/Website/style.css" \
 
 alias \
 	ta="tmux attach -t" \
