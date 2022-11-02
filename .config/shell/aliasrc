@@ -16,7 +16,7 @@ alias \
 	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
 	cal="calcurse" \
-  zpush="rsync -avz $HOME/Zomboid/Server/servertest.ini lee@rockmelon.world:/home/lee/Zomboid/Server/servertest.ini" \
+  zpush="rsync -avz $HOME/zserver/ lee@192.168.1.25:/opt/zserver/ --delte" \
 
 alias \
   cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
