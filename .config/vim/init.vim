@@ -29,6 +29,8 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 Plug 'BurntSushi/ripgrep'
 Plug 'sharkdp/fd'
 Plug 'vimwiki/vimwiki'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'francoiscabrol/ranger.vim'
 call plug#end()
 
 " --- Compile & Run
