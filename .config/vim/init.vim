@@ -17,6 +17,7 @@ set splitright
 set hidden
 set scrolloff=8
 set mouse=
+set linebreak
 
 let mapleader = ' '
 nnoremap Q :wq<cr>
@@ -44,6 +45,8 @@ func! CompileRun()
     exec "!scala %"
   elseif &filetype == 'html'
     exec "!webpush"
+  elseif &filetype == 'python3'
+    exec "!python %<"
   elseif &filetype == 'css'
     exec "!webpush"
   endif
