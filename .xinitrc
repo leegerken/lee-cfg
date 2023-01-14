@@ -1,3 +1,4 @@
+//X Window Server Init
 slstatus &
 xsetroot -solid "#2F4F4F"
 xset r rate 300 50
