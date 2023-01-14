@@ -1,5 +1,6 @@
 #!/bin/sh
 
+# general
 alias \
   reload="source $HOME/.bashrc" \
   ls="ls -aG"  \
@@ -13,15 +14,15 @@ alias \
   tdl="twitch-dl download" \
 	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
-	cal="calcurse" \
-  nf="neofetch" \
 
+# git
 alias \
   cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
   hw="git --git-dir=$HOME/Coursework/.git/ --work-tree=$HOME/Coursework" \
 
+# editing shortcuts
 alias \
-	evim="vim $HOME/.config/nvim/init.vim" \
+	evim="vim $HOME/.config/vim/init.vim" \
 	ebash="vim $HOME/.bashrc" \
   eprof="vim $HOME/.profile" \
 	est="vim $HOME/.local/src/st/config.h" \
@@ -31,6 +32,7 @@ alias \
   eweb="vim $HOME/Website/index.html" \
   estyle="vim $HOME/Website/style.css" \
 
+# tmux
 alias \
 	ta="tmux attach -t" \
 	tn="tmux new -s" \

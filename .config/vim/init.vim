@@ -1,5 +1,6 @@
 " --- General
 
+set laststatus=2
 set statusline=%f\ -\ FileType:\ %Y
 
 syntax on

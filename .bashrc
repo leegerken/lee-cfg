@@ -9,10 +9,10 @@ magenta=$(tput setaf 5 5 5)
 reset=$(tput sgr0)
 
 PS1='\[$red$bold\][\[$yellow\]\u\[$green\]@\[$blue\]\h\[$reset\] \[$magenta\]\w\[$red$bold\]]\[$reset\]\$ '
-
-set -o vi
-
 # ---
+
+# enable vi mode in the shell
+set -o vi
 
 # include aliasrc if it exists
 if [ -f $HOME/.config/shell/aliasrc ]; then
@@ -20,4 +20,4 @@ if [ -f $HOME/.config/shell/aliasrc ]; then
 fi
 
 #Necessary to move vim config from ~ to ~/.config
-export VIMINIT="source $HOME/.config/nvim/init.vim"
+export VIMINIT="source $HOME/.config/vim/init.vim"
