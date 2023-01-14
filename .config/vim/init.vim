@@ -24,15 +24,15 @@ nnoremap Q :wq<cr>
 nnoremap ! :q!<cr>
 
 " --- Plugins - vimplug 
-call plug#begin()
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
-Plug 'BurntSushi/ripgrep'
-Plug 'sharkdp/fd'
-Plug 'vimwiki/vimwiki'
-Plug 'rbgrouleff/bclose.vim'
-Plug 'francoiscabrol/ranger.vim'
-call plug#end()
+"call plug#begin()
+"Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+"Plug 'BurntSushi/ripgrep'
+"Plug 'sharkdp/fd'
+"Plug 'vimwiki/vimwiki'
+"Plug 'rbgrouleff/bclose.vim'
+"Plug 'francoiscabrol/ranger.vim'
+"call plug#end()
 
 " --- Compile & Run
 func! CompileRun()
