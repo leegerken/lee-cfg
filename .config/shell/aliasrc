@@ -14,6 +14,7 @@ alias \
   tdl="twitch-dl download" \
 	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
+  mud="tf bglinux.club 2860"
 
 # git
 alias \
