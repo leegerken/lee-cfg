@@ -8,7 +8,7 @@ syntax on
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
-set expandtab
+set expandtab             " Sets tabs to spaces
 set guicursor=i:block
 set number relativenumber
 set incsearch
@@ -23,6 +23,8 @@ set linebreak
 let mapleader = ' '
 nnoremap Q :wq<cr>
 nnoremap ! :q!<cr>
+
+au FileType perl set filetype=prolog
 
 " --- Plugins - vimplug 
 "call plug#begin()
@@ -46,8 +48,10 @@ func! CompileRun()
     exec "!scala %"
   elseif &filetype == 'html'
     exec "!webpush"
-  elseif &filetype == 'python3'
-    exec "!python %<"
+  elseif &filetype == 'prolog'
+    exec "!swipl -l %"
+  elseif &filetype == 'python'
+    exec "!python3 %"
   elseif &filetype == 'css'
     exec "!webpush"
   endif

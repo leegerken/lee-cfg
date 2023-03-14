@@ -9,8 +9,8 @@ magenta=$(tput setaf 5 5 5)
 reset=$(tput sgr0)
 
 PS1='\[$red$bold\][\[$yellow\]\u\[$green\]@\[$blue\]\h\[$reset\] \[$magenta\]\w\[$red$bold\]]\[$reset\]\$ '
-# ---
 
+# ---
 # enable vi mode in the shell
 set -o vi
 

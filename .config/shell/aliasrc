@@ -9,12 +9,14 @@ alias \
 	ali="vim $HOME/.config/shell/aliasrc" \
 	lf='ranger --choosedir=/tmp/.rangerdir; LASTDIR=`cat /tmp/.rangerdir`; cd "$LASTDIR"' \
 	mpv="mpv --window-scale=0.25" \
-	yt="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'" \
+	yt="yt-dlp -f 'besttvideo[ext=mp4]+besttaudio[ext=m4a]/mp4'" \
+	yts="yt-dlp -f 'worstvideo[ext=mp4]+worstaudio[ext=m4a]/mp4'" \
 	yta="yt-dlp -ci -f 'bestaudio[ext=m4a]'" \
   tdl="twitch-dl download" \
-	keymap="vim $HOME/.config/qmk_firmware/keyboards/boardsource/5x12/keymaps/leegerken/keymap.c" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
-  mud="tf bglinux.club 2860"
+  mud="tf bglinux.club 2860" \
+  py="python3" \
+  q='exit' \
 
 # git
 alias \
@@ -32,6 +34,10 @@ alias \
   essh="vim $HOME/.ssh/config" \
   eweb="vim $HOME/Website/index.html" \
   estyle="vim $HOME/Website/style.css" \
+
+# directory shortcuts
+alias \
+  cs="cd $HOME/iCloud/Courses/CS3060 ; ranger" \
 
 # tmux
 alias \
