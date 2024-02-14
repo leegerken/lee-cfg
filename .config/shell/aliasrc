@@ -3,7 +3,7 @@
 # general
 alias \
   reload="source $HOME/.bashrc" \
-  ls="ls -aG"  \
+  ls="ls -a"  \
   home="cd $HOME" \
 	bib="vim $HOME/.config/bib" \
 	ali="vim $HOME/.config/shell/aliasrc" \
