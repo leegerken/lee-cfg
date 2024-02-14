@@ -13,7 +13,7 @@ alias \
 	yts="yt-dlp -f 'worstvideo[ext=mp4]+worstaudio[ext=m4a]/mp4'" \
 	yta="yt-dlp -ci -f 'bestaudio[ext=m4a]'" \
   tdl="twitch-dl download" \
-	webpull="rsync -avz lee@leegerken.org:/var/www/leegerken/ ~/Website/ --delete" \
+	webpull="rsync -avz lee@leegerken.org:/var/www/htdocs/leegerken.org/ ~/Website/ --delete" \
   mud="tf bglinux.club 2860" \
   py="python3" \
   q='exit' \
