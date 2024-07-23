@@ -5,7 +5,6 @@ alias \
   reload="source $HOME/.bashrc" \
   ls="ls -a"  \
   home="cd $HOME" \
-	bib="vim $HOME/.config/bib" \
 	ali="vim $HOME/.config/shell/aliasrc" \
 	lf='ranger --choosedir=/tmp/.rangerdir; LASTDIR=`cat /tmp/.rangerdir`; cd "$LASTDIR"' \
 	mpv="mpv --window-scale=0.25" \
@@ -14,14 +13,12 @@ alias \
 	yta="yt-dlp -ci -f 'bestaudio[ext=m4a]'" \
   tdl="twitch-dl download" \
 	webpull="rsync -avz lee@leegerken.org:/var/www/htdocs/leegerken.org/ ~/Website/ --delete" \
-  mud="tf bglinux.club 2860" \
   py="python3" \
   q='exit' \
 
 # git
 alias \
   cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
-  hw="git --git-dir=$HOME/Coursework/.git/ --work-tree=$HOME/Coursework" \
 
 # editing shortcuts
 alias \
