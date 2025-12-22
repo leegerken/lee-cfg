@@ -21,3 +21,4 @@ fi
 
 #Necessary to move vim config from ~ to ~/.config
 export VIMINIT="source $HOME/.config/vim/init.vim"
+
