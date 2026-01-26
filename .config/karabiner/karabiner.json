@@ -7,7 +7,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to command+control+option+shift.",
+                                "description": "MouseButton 4 to Mission Control Left.",
                                 "from": {
                                     "modifiers": { "optional": ["any"] },
                                     "pointing_button": "button4"
@@ -25,7 +25,7 @@
                     {
                         "manipulators": [
                             {
-                                "description": "Change caps_lock to command+control+option+shift.",
+                                "description": "MouseButton 5 to Mission Control Right.",
                                 "from": {
                                     "modifiers": { "optional": ["any"] },
                                     "pointing_button": "button5"
