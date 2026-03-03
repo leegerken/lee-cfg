@@ -20,6 +20,7 @@ alias \
 # git
 alias \
   cfg="git --git-dir=$HOME/.config/.git/ --work-tree=$HOME" \
+  web="git --git-dir=$HOME/Website/.git/ --work-tree=$HOME/Website" \
 
 # editing shortcuts
 alias \
